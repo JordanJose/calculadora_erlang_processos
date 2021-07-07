@@ -102,17 +102,21 @@ start() ->
     loop().
 
 multiplicacao(From, A, B) -> 
+    io:format("~p x ~p~n", [A,B]),
     Result = A * B,
     From ! {self(), Result}.
 
-divisao(From, A, B) -> 
+divisao(From, A, B) ->
+    io:format("~p / ~p~n", [A,B]),
     Result = A / B,
     From ! {self(), Result}.
 
-subtracao(From, A, B) -> 
+subtracao(From, A, B) ->
+    io:formart("~p - ~p~n", [A,B]),
     Result = A - B,
     From ! {self(), Result}.
 
-adicao(From, A, B) -> 
+adicao(From, A, B) ->
+    io:format("~p + ~p~n", [A,B]),
     Result = A + B,
     From ! {self(), Result}.
