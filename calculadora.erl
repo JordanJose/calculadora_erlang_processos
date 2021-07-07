@@ -1,11 +1,11 @@
 -module(calculadora).
 -import(string, [strip/3, split/3]).
 -import(net_adm, [ping/1]).
-% -export([start/0]).
-% -export([multiplicacao/3]).
-% -export([adicao/3]).
-% -export([divisao/3]).
-% -export([subtracao/3]).
+-export([start/0]).
+-export([multiplicacao/3]).
+-export([adicao/3]).
+-export([divisao/3]).
+-export([subtracao/3]).
 
 read_input() -> strip(io:get_line("Informe a expressão: "), right, $\n).
 
